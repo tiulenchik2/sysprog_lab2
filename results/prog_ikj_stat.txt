@@ -1,0 +1,24 @@
+
+ Performance counter stats for './prog_ikj':
+
+                14      context-switches                 #     48.4 cs/sec  cs_per_second     
+                 0      cpu-migrations                   #      0.0 migrations/sec  migrations_per_second
+             6,209      page-faults                      #  21451.1 faults/sec  page_faults_per_second
+            289.45 msec task-clock                       #      1.0 CPUs  CPUs_utilized       
+        95,832,114      L1-dcache-load-misses            #     27.9 %  l1d_miss_rate            (72.06%)
+        12,783,527      LLC-loads                        #     46.1 %  llc_miss_rate            (63.77%)
+           769,415      branch-misses                    #      0.5 %  branch_miss_rate         (55.13%)
+       158,382,621      branches                         #    547.2 M/sec  branch_frequency     (55.12%)
+       752,244,086      cpu-cycles                       #      2.6 GHz  cycles_frequency       (55.11%)
+     1,023,818,193      instructions                     #      1.4 instructions  insn_per_cycle  (45.89%)
+                        TopdownL1                        #     27.8 %  tma_backend_bound      
+                                                         #     45.6 %  tma_bad_speculation      (63.16%)
+                                                         #      4.7 %  tma_frontend_bound       (62.83%)
+                                                         #     21.9 %  tma_retiring             (71.78%)
+
+       0.292416503 seconds time elapsed
+
+       0.279956000 seconds user
+       0.012041000 seconds sys
+
+

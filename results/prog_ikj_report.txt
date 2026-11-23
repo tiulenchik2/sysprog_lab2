@@ -1,0 +1,128 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 1K of event 'cpu/cycles/P'
+# Event count (approx.): 791033555
+#
+# Overhead  Command   Shared Object      Symbol                       
+# ........  ........  .................  .............................
+#
+    60.16%  prog_ikj  prog_ikj           [.] matmul
+            |          
+             --60.07%--matmul
+                       __libc_start_call_main
+                       call_init (inlined)
+                       __libc_start_main@@GLIBC_2.34
+                       _start
+
+    25.74%  prog_ikj  prog_ikj           [.] saxpy.constprop.0
+            |
+            ---saxpy (inlined)
+               __libc_start_call_main
+               call_init (inlined)
+               __libc_start_main@@GLIBC_2.34
+               _start
+
+     3.37%  prog_ikj  libc.so.6          [.] __random_r
+            |          
+             --3.14%--__random_r
+                       rand
+                       init
+                       main
+                       __libc_start_call_main
+                       call_init (inlined)
+                       __libc_start_main@@GLIBC_2.34
+                       _start
+
+     3.14%  prog_ikj  libc.so.6          [.] __random
+            |          
+            |--2.20%--__random
+            |          |          
+            |           --1.45%--rand
+            |                     init
+            |                     main
+            |                     __libc_start_call_main
+            |                     call_init (inlined)
+            |                     __libc_start_main@@GLIBC_2.34
+            |                     _start
+            |          
+             --0.51%--__random_r
+                       rand
+                       init
+                       main
+                       __libc_start_call_main
+                       call_init (inlined)
+                       __libc_start_main@@GLIBC_2.34
+                       _start
+
+     1.60%  prog_ikj  libc.so.6          [.] rand
+            |          
+            |--0.60%--init
+            |          main
+            |          __libc_start_call_main
+            |          call_init (inlined)
+            |          __libc_start_main@@GLIBC_2.34
+            |          _start
+            |          
+             --0.58%--__random
+                       init
+                       main
+                       __libc_start_call_main
+                       call_init (inlined)
+                       __libc_start_main@@GLIBC_2.34
+                       _start
+
+     1.10%  prog_ikj  prog_ikj           [.] init
+            |          
+             --0.60%--rand@plt
+                       main
+                       __libc_start_call_main
+                       call_init (inlined)
+                       __libc_start_main@@GLIBC_2.34
+                       _start
+
+     1.10%  prog_ikj  prog_ikj           [.] sum
+            |
+            ---sum
+               __libc_start_call_main
+               call_init (inlined)
+               __libc_start_main@@GLIBC_2.34
+               _start
+
+     0.41%  prog_ikj  [kernel.kallsyms]  [k] native_irq_return_iret
+     0.34%  prog_ikj  [kernel.kallsyms]  [k] sync_regs
+     0.31%  prog_ikj  prog_ikj           [.] rand@plt
+     0.19%  prog_ikj  [kernel.kallsyms]  [k] __rcu_read_unlock
+     0.19%  prog_ikj  [kernel.kallsyms]  [k] kernel_init_pages
+     0.18%  prog_ikj  [kernel.kallsyms]  [k] lru_gen_add_folio
+     0.18%  prog_ikj  [kernel.kallsyms]  [k] folio_add_new_anon_rmap
+     0.18%  prog_ikj  [kernel.kallsyms]  [k] blk_cgroup_congested
+     0.17%  prog_ikj  [kernel.kallsyms]  [k] __handle_mm_fault
+     0.16%  prog_ikj  [kernel.kallsyms]  [k] pte_offset_map_lock
+     0.12%  prog_ikj  [kernel.kallsyms]  [k] native_flush_tlb_one_user
+     0.11%  prog_ikj  [kernel.kallsyms]  [k] exc_page_fault
+     0.10%  prog_ikj  [kernel.kallsyms]  [k] try_charge_memcg
+     0.09%  prog_ikj  [kernel.kallsyms]  [k] _find_first_and_bit
+     0.09%  prog_ikj  [unknown]          [k] 0xffffffffc04014f2
+     0.09%  prog_ikj  [kernel.kallsyms]  [k] __folio_throttle_swaprate
+     0.09%  prog_ikj  [kernel.kallsyms]  [k] mas_store_gfp
+     0.09%  prog_ikj  [kernel.kallsyms]  [k] get_mem_cgroup_from_mm
+     0.08%  prog_ikj  [kernel.kallsyms]  [k] lock_vma_under_rcu
+     0.08%  prog_ikj  [kernel.kallsyms]  [k] get_page_from_freelist
+     0.08%  prog_ikj  [kernel.kallsyms]  [k] __rmqueue_pcplist
+     0.08%  prog_ikj  [kernel.kallsyms]  [k] error_return
+     0.08%  prog_ikj  [kernel.kallsyms]  [k] flush_tlb_mm_range
+     0.08%  prog_ikj  [kernel.kallsyms]  [k] lruvec_stat_mod_folio
+     0.08%  prog_ikj  [kernel.kallsyms]  [k] update_cfs_group
+     0.06%  prog_ikj  [kernel.kallsyms]  [k] folio_batch_move_lru
+     0.03%  prog_ikj  [kernel.kallsyms]  [k] __mmap_region
+     0.02%  prog_ikj  [kernel.kallsyms]  [k] free_unref_folios
+     0.02%  prog_ikj  [kernel.kallsyms]  [k] bpf_trace_run3
+     0.02%  prog_ikj  [kernel.kallsyms]  [k] get_align_mask
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

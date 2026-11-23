@@ -1,0 +1,24 @@
+
+ Performance counter stats for './prog_O3':
+
+                46      context-switches                 #     41.3 cs/sec  cs_per_second     
+                 1      cpu-migrations                   #      0.9 migrations/sec  migrations_per_second
+             5,185      page-faults                      #   4650.9 faults/sec  page_faults_per_second
+          1,114.83 msec task-clock                       #      1.0 CPUs  CPUs_utilized       
+       164,641,704      L1-dcache-load-misses            #     40.8 %  l1d_miss_rate            (72.66%)
+       126,696,223      LLC-loads                        #     30.7 %  llc_miss_rate            (63.47%)
+           339,571      branch-misses                    #      0.1 %  branch_miss_rate         (54.51%)
+       237,088,015      branches                         #    212.7 M/sec  branch_frequency     (54.57%)
+     2,158,188,725      cpu-cycles                       #      1.9 GHz  cycles_frequency       (54.72%)
+     1,298,776,687      instructions                     #      0.6 instructions  insn_per_cycle  (45.64%)
+                        TopdownL1                        #     43.9 %  tma_backend_bound      
+                                                         #     48.3 %  tma_bad_speculation      (63.66%)
+                                                         #      0.8 %  tma_frontend_bound       (63.59%)
+                                                         #      7.0 %  tma_retiring             (72.67%)
+
+       1.123202650 seconds time elapsed
+
+       1.092810000 seconds user
+       0.024972000 seconds sys
+
+

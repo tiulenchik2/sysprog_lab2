@@ -1,0 +1,24 @@
+
+ Performance counter stats for './prog_O0':
+
+               181      context-switches                 #     18.0 cs/sec  cs_per_second     
+                 0      cpu-migrations                   #      0.0 migrations/sec  migrations_per_second
+             5,186      page-faults                      #    516.5 faults/sec  page_faults_per_second
+         10,040.04 msec task-clock                       #      1.0 CPUs  CPUs_utilized       
+     1,114,762,536      L1-dcache-load-misses            #      9.7 %  l1d_miss_rate            (72.74%)
+     1,067,042,977      LLC-loads                        #     11.6 %  llc_miss_rate            (63.65%)
+         1,357,727      branch-misses                    #      0.1 %  branch_miss_rate         (54.56%)
+     1,373,756,041      branches                         #    136.8 M/sec  branch_frequency     (54.56%)
+    25,861,078,318      cpu-cycles                       #      2.6 GHz  cycles_frequency       (54.54%)
+    31,710,136,800      instructions                     #      1.2 instructions  insn_per_cycle  (45.44%)
+                        TopdownL1                        #     14.2 %  tma_backend_bound      
+                                                         #     74.1 %  tma_bad_speculation      (63.61%)
+                                                         #      2.2 %  tma_frontend_bound       (63.63%)
+                                                         #      9.5 %  tma_retiring             (72.72%)
+
+      10.050208550 seconds time elapsed
+
+      10.023624000 seconds user
+       0.018993000 seconds sys
+
+

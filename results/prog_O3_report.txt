@@ -1,0 +1,115 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 2K of event 'cpu/cycles/P'
+# Event count (approx.): 1620163816
+#
+# Overhead  Command  Shared Object      Symbol                                     
+# ........  .......  .................  ...........................................
+#
+    81.62%  prog_O3  prog_O3            [.] matmul
+            |          
+             --81.58%--matmul
+                       main
+                       __libc_start_call_main
+                       call_init (inlined)
+                       __libc_start_main@@GLIBC_2.34
+                       _start
+
+    10.52%  prog_O3  prog_O3            [.] saxpy.constprop.0
+            |          
+             --10.48%--saxpy (inlined)
+                       __libc_start_call_main
+                       call_init (inlined)
+                       __libc_start_main@@GLIBC_2.34
+                       _start
+
+     1.70%  prog_O3  libc.so.6          [.] __random_r
+            |          
+             --1.22%--__random_r
+                       rand
+                       init
+                       main
+                       __libc_start_call_main
+                       call_init (inlined)
+                       __libc_start_main@@GLIBC_2.34
+                       _start
+
+     1.27%  prog_O3  libc.so.6          [.] __random
+            |          
+             --0.93%--__random
+                       |          
+                        --0.59%--rand
+                                  init
+                                  main
+                                  __libc_start_call_main
+                                  call_init (inlined)
+                                  __libc_start_main@@GLIBC_2.34
+                                  _start
+
+     0.81%  prog_O3  prog_O3            [.] init
+     0.76%  prog_O3  libc.so.6          [.] rand
+     0.54%  prog_O3  prog_O3            [.] sum
+            |
+            ---sum
+               __libc_start_call_main
+               call_init (inlined)
+               __libc_start_main@@GLIBC_2.34
+               _start
+
+     0.27%  prog_O3  [kernel.kallsyms]  [k] sync_regs
+     0.19%  prog_O3  prog_O3            [.] rand@plt
+     0.17%  prog_O3  [kernel.kallsyms]  [k] mas_walk
+     0.12%  prog_O3  [kernel.kallsyms]  [k] __rmqueue_pcplist
+     0.10%  prog_O3  [kernel.kallsyms]  [k] native_irq_return_iret
+     0.08%  prog_O3  [kernel.kallsyms]  [k] __calc_delta.constprop.0
+     0.08%  prog_O3  [kernel.kallsyms]  [k] task_tick_fair
+     0.08%  prog_O3  [kernel.kallsyms]  [k] update_curr
+     0.08%  prog_O3  [kernel.kallsyms]  [k] __rcu_read_unlock
+     0.08%  prog_O3  [kernel.kallsyms]  [k] lru_add
+     0.07%  prog_O3  [kernel.kallsyms]  [k] get_mem_cgroup_from_mm
+     0.07%  prog_O3  [kernel.kallsyms]  [k] do_anonymous_page
+     0.07%  prog_O3  [kernel.kallsyms]  [k] try_charge_memcg
+     0.07%  prog_O3  [kernel.kallsyms]  [k] vma_alloc_folio_noprof
+     0.06%  prog_O3  [kernel.kallsyms]  [k] its_return_thunk
+     0.05%  prog_O3  [kernel.kallsyms]  [k] error_entry
+     0.04%  prog_O3  [kernel.kallsyms]  [k] __pte_offset_map
+     0.04%  prog_O3  [kernel.kallsyms]  [k] update_cfs_rq_load_avg
+     0.04%  prog_O3  [kernel.kallsyms]  [k] native_apic_msr_eoi
+     0.04%  prog_O3  [kernel.kallsyms]  [k] __run_timers
+     0.04%  prog_O3  [kernel.kallsyms]  [k] rb_next
+     0.04%  prog_O3  [kernel.kallsyms]  [k] update_vdso_time_data
+     0.04%  prog_O3  [kernel.kallsyms]  [k] mod_node_page_state
+     0.04%  prog_O3  [kernel.kallsyms]  [k] alloc_anon_folio
+     0.04%  prog_O3  [kernel.kallsyms]  [k] set_ptes.isra.0
+     0.04%  prog_O3  [kernel.kallsyms]  [k] __alloc_frozen_pages_noprof
+     0.04%  prog_O3  [kernel.kallsyms]  [k] native_write_msr
+     0.04%  prog_O3  [kernel.kallsyms]  [k] update_sd_lb_stats.constprop.0
+     0.04%  prog_O3  [kernel.kallsyms]  [k] __css_rstat_updated
+     0.04%  prog_O3  [kernel.kallsyms]  [k] perf_adjust_freq_unthr_context
+     0.04%  prog_O3  [kernel.kallsyms]  [k] update_cfs_group
+     0.04%  prog_O3  [kernel.kallsyms]  [k] tick_do_update_jiffies64
+     0.04%  prog_O3  [kernel.kallsyms]  [k] ntp_tick_length
+     0.04%  prog_O3  [kernel.kallsyms]  [k] update_vsyscall
+     0.04%  prog_O3  [kernel.kallsyms]  [k] native_sched_clock
+     0.04%  prog_O3  [kernel.kallsyms]  [k] timerqueue_add
+     0.04%  prog_O3  [kernel.kallsyms]  [k] rcu_core
+     0.04%  prog_O3  [kernel.kallsyms]  [k] __radix_tree_lookup
+     0.04%  prog_O3  [kernel.kallsyms]  [k] __irq_exit_rcu
+     0.03%  prog_O3  [kernel.kallsyms]  [k] __mem_cgroup_charge
+     0.03%  prog_O3  [kernel.kallsyms]  [k] __handle_mm_fault
+     0.03%  prog_O3  [kernel.kallsyms]  [k] __cgroup_account_cputime_field
+     0.03%  prog_O3  [kernel.kallsyms]  [k] qi_submit_sync
+     0.03%  prog_O3  [kernel.kallsyms]  [k] blk_cgroup_congested
+     0.03%  prog_O3  [kernel.kallsyms]  [k] __sched_balance_update_blocked_averages
+     0.03%  prog_O3  [kernel.kallsyms]  [k] rmqueue.isra.0
+     0.02%  prog_O3  [kernel.kallsyms]  [k] handle_mm_fault
+     0.01%  prog_O3  [kernel.kallsyms]  [k] __nr_to_section
+     0.01%  prog_O3  [kernel.kallsyms]  [k] unlock_page
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
